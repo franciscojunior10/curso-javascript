@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lidandom com Elemento</title>
+</head>
+<body>
+    <div id="app">
+        <input id="nome" />
+    </div>
+
+    <script>
+        var linkElement = document.createElement('a');
+        linkElement.setAttribute('href', 'https://github.com/franciscojunior10');
+
+        var textElemnet = document.createTextNode('Acessar link');
+        linkElement.appendChild(textElemnet);
+
+        var containerElement = document.querySelector("#app");
+        containerElement.appendChild(linkElement);
+
+        var inputElement = document.querySelector('#nome');
+        containerElement.removeChild(inputElement);
+    </script>
+</body>
+</html>

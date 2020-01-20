@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Desafio 2</title>
+</head>
+<body>
+    <!-- <button id="button">CRIAR QUADRADO</button>
+
+    <div id="quadrados"></div> -->
+    <ul></ul>
+
+    <input type="text" name="nome">
+    <button onclick="adicionar()">Adicionar</button>
+
+    <script>
+        // var btnElement = document.getElementById('button');
+        // var quadradosElement = document.getElementById('quadrados'); 
+        
+        // function getRandomColor() {
+        //     var letters = "0123456789ABCDEF";
+        //     var color = "#";
+        //     for (var i = 0; i < 6; i++) {
+        //         color += letters[Math.floor(Math.random() * 16)];
+        //     }
+        //     return color;
+        // }
+
+        // btnElement.onclick = function() {
+        //     var quadrados = document.createElement('div');
+
+        //     quadrados.style.width = '100px';
+        //     quadrados.style.height = '100px';
+        //     quadrados.style.backgroundColor = '#F00';
+
+        //     quadrados.onmouseover = function(){
+        //         quadrados.style.backgroundColor = getRandomColor();
+        //     }
+
+        //     quadradosElement.appendChild(quadrados);
+        // }
+        
+        var nomes = ["Diego", "Gabriel", "Lucas"];
+        var ulElement = document.querySelector('ul');
+        var inputElement = document.querySelector('input');
+        
+        
+        // for (nome of nomes) {
+        function addItem(text){
+            var liElement = document.createElement('li');
+            var textElement = document.createTextNode(text);
+
+            liElement.appendChild(textElement);
+            ulElement.appendChild(liElement);
+        }
+        // }
+
+        function adicionar() {
+            addItem(inputElement.value);
+            inputElement.value = "";
+        }
+
+        for (nome of nomes) {
+            addItem(nome);
+        }
+
+    </script>
+    
+</body>
+</html>
